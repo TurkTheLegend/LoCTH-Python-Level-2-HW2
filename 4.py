@@ -1,6 +1,6 @@
 def TelNumberCheck(x):
     assert x[0] == "+" , 'The phone number must start with "+"'
-    assert "0" <= x[1] <= "9" and "0" <= x[2] <= "9" ,"The Phone Number must be + and followed by 2 digits"
+    assert x[1:] in ["0","1","2","3","4","5","6","7","8","9"] , "The phone number must be digit"
     assert len(x) == 13 , "The phone number does not match the length specified" 
     assert type(x) == str ,"The phone number must be a String"
     if x[:3] == "+66":

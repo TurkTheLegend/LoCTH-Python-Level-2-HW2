@@ -1,8 +1,8 @@
 def TelNumberCheck(x):
     if x[0] != "+" :
         raise LookupError("The phone number must start with +")
-    elif not ("0" <= x[1] <= "9" and "0" <= x[2] <= "9"):
-        raise ValueError("The phone number must be + and followed by 2 digits")
+    elif x[1:] not in ["0","1","2","3","4","5","6","7","8","9"]:
+        raise ValueError("The phone number must be digit")
     elif len(x) != 13 :
        raise IndexError("The phone number does not match the length specified") #เวเขียนโจทย์ผิด
     elif type(x) != str :
