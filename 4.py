@@ -1,7 +1,7 @@
 def TelNumberCheck(x):
-    assert x[0] == "+" ,'Error Code must start with "+"'
-    assert "0" <= x[1] <= "9" and "0" <= x[2] <= "9" ,"Error Code must be + and followed by 2 digits"
-    assert len(x) == 13 , "The phone number does not match the length specified" #เวเขียนโจทย์ผิด
+    assert x[0] == "+" , 'The phone number must start with "+"'
+    assert "0" <= x[1] <= "9" and "0" <= x[2] <= "9" ,"The Phone Number must be + and followed by 2 digits"
+    assert len(x) == 13 , "The phone number does not match the length specified" 
     assert type(x) == str ,"The phone number must be a String"
     if x[:3] == "+66":
         return "Thailand"
